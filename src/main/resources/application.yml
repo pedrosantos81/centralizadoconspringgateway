@@ -1,0 +1,20 @@
+server:
+  port: 8888
+spring: 
+  profiles:
+    active:
+    - native
+  cloud:
+    config:
+      server:
+        #git:   #dirección repositorio remoto
+         # uri: https://github.com/pedrosantos81/configuracion_servicios
+        #default-label: main # es el nombre de la rama donde estan los archivos de configuracion,sino se establece busca en la rama master
+        native:
+          search-locations:
+          - file:///c:\temp\config
+          
+  application:
+    name: config-service
+        
+        
